@@ -6,7 +6,7 @@ import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 //import * as serviceWorker from './serviceWorker';
 import TracePage from './components/TracePage/index'
-import stub from './stub'
+import stub_ from './stub'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import configureStore from './configure-store';
@@ -17,7 +17,7 @@ import 'u-basscss/css/padding.css';
 import 'u-basscss/css/position.css';
 import 'u-basscss/css/typography.css';
 const stub = {
-    data: stub
+    data: stub_
 }
 
 const { Header, Content } = Layout;
