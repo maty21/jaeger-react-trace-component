@@ -450,6 +450,26 @@ var TracePageImpl = exports.TracePageImpl = function (_React$PureComponent) {
         React.createElement(
           'div',
           { className: 'Tracepage--headerSection', ref: this.setHeaderHeight },
+          React.createElement(_TracePageHeader2.default, {
+            duration: duration,
+            maxDepth: maxSpanDepth,
+            name: (0, _traceViewer.getTraceName)(spans),
+            numServices: numberOfServices,
+            numSpans: spans.length,
+            slimView: slimView,
+            timestamp: startTime,
+            traceID: traceID,
+            onSlimViewClicked: this.toggleSlimView,
+            textFilter: textFilter,
+            prevResult: this._scrollManager.scrollToPrevVisibleSpan,
+            nextResult: this._scrollManager.scrollToNextVisibleSpan,
+            clearSearch: this.clearSearch,
+            resultCount: findMatchesIDs ? findMatchesIDs.size : 0,
+            updateTextFilter: this.updateTextFilter,
+            archiveButtonVisible: archiveEnabled,
+            onArchiveClicked: this.archiveTrace,
+            ref: this._searchBar
+          }),
           !slimView && React.createElement(_SpanGraph2.default, {
             trace: data,
             viewRange: viewRange,

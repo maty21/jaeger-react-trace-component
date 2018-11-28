@@ -172,7 +172,7 @@ export function TracePageHeaderFn(props) {
 
   return (
     <header>
-      <div className="TracePageHeader--titleRow">
+      {/* <div className="TracePageHeader--titleRow">
         <a className="ub-flex-auto ub-mr2" onClick={onSlimViewClicked} role="switch" aria-checked={!slimView}>
           <h1 className="TracePageHeader--title ub-flex ub-items-center">
             {slimView ? <IoChevronRight className="ub-mr2" /> : <IoChevronDown className="ub-mr2" />}
@@ -200,8 +200,19 @@ export function TracePageHeaderFn(props) {
             Archive Trace
           </Button>
         )}
-      </div>
+      </div> */}
+      <div className="TracePageHeader--titleRow">
       {!slimView && <LabeledList className="TracePageHeader--overviewItems" items={overviewItems} />}
+        <TracePageSearchBar
+          updateTextFilter={updateTextFilter}
+          textFilter={textFilter}
+          prevResult={prevResult}
+          nextResult={nextResult}
+          clearSearch={clearSearch}
+          resultCount={resultCount}
+          ref={forwardedRef}
+        />
+        </div>
     </header>
   );
 }

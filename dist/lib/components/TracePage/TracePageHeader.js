@@ -157,17 +157,7 @@ function TracePageHeaderFn(props) {
     React.createElement(
       'div',
       { className: 'TracePageHeader--titleRow' },
-      React.createElement(
-        'a',
-        { className: 'ub-flex-auto ub-mr2', onClick: onSlimViewClicked, role: 'switch', 'aria-checked': !slimView },
-        React.createElement(
-          'h1',
-          { className: 'TracePageHeader--title ub-flex ub-items-center' },
-          slimView ? React.createElement(_chevronRight2.default, { className: 'ub-mr2' }) : React.createElement(_chevronDown2.default, { className: 'ub-mr2' }),
-          name || _constants.FALLBACK_TRACE_NAME
-        )
-      ),
-      React.createElement(_KeyboardShortcutsHelp2.default, { className: 'ub-mr2' }),
+      !slimView && React.createElement(_LabeledList2.default, { className: 'TracePageHeader--overviewItems', items: overviewItems }),
       React.createElement(_TracePageSearchBar2.default, {
         updateTextFilter: updateTextFilter,
         textFilter: textFilter,
@@ -176,25 +166,8 @@ function TracePageHeaderFn(props) {
         clearSearch: clearSearch,
         resultCount: resultCount,
         ref: forwardedRef
-      }),
-      React.createElement(
-        _antd.Dropdown,
-        { overlay: viewMenu },
-        React.createElement(
-          _antd.Button,
-          { className: 'ub-mr2' },
-          'View Options ',
-          React.createElement(_antd.Icon, { type: 'down' })
-        )
-      ),
-      archiveButtonVisible && React.createElement(
-        _antd.Button,
-        { className: 'ub-mr2 ub-flex ub-items-center', onClick: onArchiveClicked },
-        React.createElement(_iosFilingOutline2.default, { className: 'TracePageHeader--archiveIcon' }),
-        'Archive Trace'
-      )
-    ),
-    !slimView && React.createElement(_LabeledList2.default, { className: 'TracePageHeader--overviewItems', items: overviewItems })
+      })
+    )
   );
 }
 
