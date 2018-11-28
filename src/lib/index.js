@@ -6,7 +6,7 @@ import { Layout } from 'antd';
 import 'antd/dist/antd.css';
 //import * as serviceWorker from './serviceWorker';
 import TracePage from './components/TracePage/index'
-import stub_ from './stub'
+import stub from './stub'
 import { Provider } from 'react-redux'
 import { createStore } from 'redux'
 import configureStore from './configure-store';
@@ -16,16 +16,16 @@ import 'u-basscss/css/margin.css';
 import 'u-basscss/css/padding.css';
 import 'u-basscss/css/position.css';
 import 'u-basscss/css/typography.css';
-const stub = {
-    data: stub_
+const trace = {
+    data: stub
 }
 
 const { Header, Content } = Layout;
 const cont = {};
 const store = createStore(() => { })
-const Trace = (trace = stub) => (
+const Trace = (trace) => (
     <Provider context={cont} store={configureStore()}>
-        <TracePage trace={trace} />
+        <TracePage trace={trace.trace} />
     </Provider>
 )
 

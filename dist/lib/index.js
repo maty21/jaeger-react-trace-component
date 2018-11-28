@@ -45,7 +45,7 @@ require('u-basscss/css/typography.css');
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 //import ReactDOM from 'react-dom';
-var stub = {
+var trace = {
     data: _stub2.default
 };
 //import * as serviceWorker from './serviceWorker';
@@ -56,12 +56,11 @@ var Header = _antd.Layout.Header,
 
 var cont = {};
 var store = (0, _redux.createStore)(function () {});
-var Trace = function Trace() {
-    var trace = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : stub;
+var Trace = function Trace(trace) {
     return _react2.default.createElement(
         _reactRedux.Provider,
         { context: cont, store: (0, _configureStore2.default)() },
-        _react2.default.createElement(_index2.default, { trace: trace })
+        _react2.default.createElement(_index2.default, { trace: trace.trace })
     );
 };
 
