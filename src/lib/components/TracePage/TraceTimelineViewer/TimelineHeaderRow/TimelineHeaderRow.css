@@ -19,7 +19,7 @@ limitations under the License.
   border-bottom: 1px solid #d8d8d8;
   height: 38px;
   line-height: 38px;
-  position: fixed;
+  /* position: fixed; */
   width: 100%;
   z-index: 4;
 }

@@ -16,16 +16,16 @@ import 'u-basscss/css/margin.css';
 import 'u-basscss/css/padding.css';
 import 'u-basscss/css/position.css';
 import 'u-basscss/css/typography.css';
-const trace = {
+const trace_ = {
     data: stub
 }
 
 const { Header, Content } = Layout;
 const cont = {};
 const store = createStore(() => { })
-const Trace = (trace) => (
+const Trace = (trace=trace_) => (
     <Provider context={cont} store={configureStore()}>
-        <TracePage trace={trace.trace} />
+        <TracePage trace={trace_} />
     </Provider>
 )
 

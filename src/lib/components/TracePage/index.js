@@ -375,7 +375,8 @@ export class TracePageImpl extends React.PureComponent {
           )}
         </div>
         {headerHeight && (
-          <section style={{ paddingTop: headerHeight }}>
+         // <section style={{ paddingTop: headerHeight }}>
+            <section >
             <TraceTimelineViewer
               registerAccessors={this._scrollManager.setAccessors}
               findMatchesIDs={findMatchesIDs}
