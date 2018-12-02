@@ -25,7 +25,7 @@ const cont = {};
 const store = createStore(() => { })
 const Trace = (trace=trace_) => (
     <Provider context={cont} store={configureStore()}>
-        <TracePage trace={trace_} />
+        <TracePage trace={trace} />
     </Provider>
 )
 
