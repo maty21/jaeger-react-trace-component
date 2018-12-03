@@ -17,7 +17,7 @@ import 'u-basscss/css/padding.css';
 import 'u-basscss/css/position.css';
 import 'u-basscss/css/typography.css';
 const trace_ = {
-    data: stub
+    data: {trace:stub}
 }
 
 const { Header, Content } = Layout;
@@ -25,7 +25,7 @@ const cont = {};
 const store = createStore(() => { })
 const Trace = (trace=trace_) => (
     <Provider context={cont} store={configureStore()}>
-        <TracePage trace={trace} />
+        <TracePage trace={trace.trace} />
     </Provider>
 )
 
