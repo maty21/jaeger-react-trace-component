@@ -12,8 +12,6 @@ require('./index.css');
 
 var _antd = require('antd');
 
-require('antd/dist/antd.css');
-
 var _index = require('./components/TracePage/index');
 
 var _index2 = _interopRequireDefault(_index);
@@ -44,13 +42,14 @@ require('u-basscss/css/typography.css');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-//import ReactDOM from 'react-dom';
+//import App from './App';
 var trace_ = {
     data: { trace: _stub2.default }
 };
+//import 'antd/dist/antd.css';
 //import * as serviceWorker from './serviceWorker';
 
-//import App from './App';
+//import ReactDOM from 'react-dom';
 var Header = _antd.Layout.Header,
     Content = _antd.Layout.Content;
 

@@ -3,7 +3,8 @@ import React from 'react';
 import './index.css';
 //import App from './App';
 import { Layout } from 'antd';
-import 'antd/dist/antd.css';
+//add css for use it independently
+//import 'antd/dist/antd.css';
 //import * as serviceWorker from './serviceWorker';
 import TracePage from './components/TracePage/index'
 import stub from './stub'
