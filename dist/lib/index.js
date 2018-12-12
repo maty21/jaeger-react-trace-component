@@ -46,6 +46,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 var trace_ = {
     data: { trace: _stub2.default }
 };
+//add css for use it independently
 //import 'antd/dist/antd.css';
 //import * as serviceWorker from './serviceWorker';
 
@@ -54,12 +55,13 @@ var Header = _antd.Layout.Header,
     Content = _antd.Layout.Content;
 
 var cont = {};
-var store = (0, _redux.createStore)(function () {});
+//const store = createStore(() => { })
 var Trace = function Trace() {
     var trace = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : trace_;
+    var context = arguments.length > 1 && arguments[1] !== undefined ? arguments[1] : cont;
     return _react2.default.createElement(
         _reactRedux.Provider,
-        { context: cont, store: (0, _configureStore2.default)() },
+        { context: context, store: (0, _configureStore2.default)() },
         _react2.default.createElement(_index2.default, { trace: trace.trace })
     );
 };

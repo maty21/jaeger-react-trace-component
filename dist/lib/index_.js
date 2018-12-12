@@ -20,8 +20,6 @@ var _App2 = _interopRequireDefault(_App);
 
 var _antd = require('antd');
 
-require('antd/dist/antd.css');
-
 var _trace = require('./trace');
 
 var _trace2 = _interopRequireDefault(_trace);
@@ -46,6 +44,7 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 //     data: stub
 // }
 
+//import 'antd/dist/antd.css'; 
 //import * as serviceWorker from './serviceWorker';
 var Content = _antd.Layout.Content;
 

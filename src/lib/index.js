@@ -23,9 +23,9 @@ const trace_ = {
 
 const { Header, Content } = Layout;
 const cont = {};
-const store = createStore(() => { })
-const Trace = (trace=trace_) => (
-    <Provider context={cont} store={configureStore()}>
+//const store = createStore(() => { })
+const Trace = (trace=trace_,context=cont) => (
+    <Provider context={context} store={configureStore()}>
         <TracePage trace={trace.trace} />
     </Provider>
 )
