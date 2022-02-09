@@ -15,7 +15,7 @@
 // limitations under the License.
 
 import * as React from 'react';
-import { Button, Input } from 'antd';
+import { Icon, Input } from 'antd';
 
 import * as markers from './TracePageSearchBar.markers';
 
@@ -67,9 +67,9 @@ export function TracePageSearchBarFn(props                         ) {
           onKeyDown={onKeyDown}
           onPressEnter={nextResult}
         />
-        <Button className={btnClass} disabled={!textFilter} icon="up" onClick={prevResult} />
-        <Button className={btnClass} disabled={!textFilter} icon="down" onClick={nextResult} />
-        <Button className={btnClass} disabled={!textFilter} icon="close" onClick={clearSearch} />
+       <button><Icon type="up" className={btnClass} disabled={!textFilter} onClick={prevResult}/></button>
+       <button><Icon type="down"className={btnClass} disabled={!textFilter} onClick={nextResult}/></button>
+       <button><Icon type="close"className={btnClass} disabled={!textFilter} onClick={clearSearch}/></button>
       </Input.Group>
     </div>
   );

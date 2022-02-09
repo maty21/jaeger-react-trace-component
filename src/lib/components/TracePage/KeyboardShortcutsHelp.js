@@ -15,7 +15,7 @@
 // limitations under the License.
 
 import React from 'react';
-import { Button, Modal, Table } from 'antd';
+import {  Modal, Table } from 'antd';
 
 import { kbdMappings } from './keyboard-shortcuts';
 import track from './KeyboardShortcutsHelp.track';
@@ -100,8 +100,8 @@ function helpModal() {
 export default function KeyboardShortcutsHelp(props                            ) {
   const { className } = props;
   return (
-    <Button className={className} onClick={helpModal}>
+    <button className={className} onClick={helpModal}>
       <span className="KeyboardShortcutsHelp--cta">⌘</span>
-    </Button>
+    </button>
   );
 }

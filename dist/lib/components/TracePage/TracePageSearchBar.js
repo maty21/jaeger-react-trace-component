@@ -79,9 +79,21 @@ function TracePageSearchBarFn(props) {
         onKeyDown: onKeyDown,
         onPressEnter: nextResult
       }),
-      React.createElement(_antd.Button, { className: btnClass, disabled: !textFilter, icon: 'up', onClick: prevResult }),
-      React.createElement(_antd.Button, { className: btnClass, disabled: !textFilter, icon: 'down', onClick: nextResult }),
-      React.createElement(_antd.Button, { className: btnClass, disabled: !textFilter, icon: 'close', onClick: clearSearch })
+      React.createElement(
+        'button',
+        null,
+        React.createElement(_antd.Icon, { type: 'up', className: btnClass, disabled: !textFilter, onClick: prevResult })
+      ),
+      React.createElement(
+        'button',
+        null,
+        React.createElement(_antd.Icon, { type: 'down', className: btnClass, disabled: !textFilter, onClick: nextResult })
+      ),
+      React.createElement(
+        'button',
+        null,
+        React.createElement(_antd.Icon, { type: 'close', className: btnClass, disabled: !textFilter, onClick: clearSearch })
+      )
     )
   );
 }
