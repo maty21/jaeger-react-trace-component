@@ -121,7 +121,7 @@ function KeyboardShortcutsHelp(props) {
   var className = props.className;
 
   return _react2.default.createElement(
-    _antd.Button,
+    'button',
     { className: className, onClick: helpModal },
     _react2.default.createElement(
       'span',
